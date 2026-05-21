@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RMK PTY | Gaming Lounge & Soluciones Informáticas | La Chorrera</title>
+  <meta name="description" content="PCs Gaming 144Hz+, PS5, impresiones láser, soporte técnico y trabajos académicos en La Chorrera. Reserva tu puesto o cotiza hoy.">
+  <meta name="keywords" content="sala de juegos La Chorrera, PC gaming Panamá, impresiones La Chorrera, soporte técnico computadoras, RMK PTY">
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="RMK PTY | Gaming & Soluciones IT">
+  <meta property="og:description" content="Alto rendimiento gaming + centro de productividad. Precios accesibles, equipos profesionales.">
+  <meta property="og:url" content="https://rmkpty.com">
+  <meta property="og:image" content="/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="es_PA">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="RMK PTY | Gaming & Soluciones IT">
+  <meta name="twitter:description" content="Alto rendimiento gaming + centro de productividad.">
+
+  <!-- Favicon SVG inline -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%238b5cf6' width='100' height='100' rx='20'/%3E%3Ctext x='50' y='68' font-family='Arial' font-size='50' font-weight='bold' fill='white' text-anchor='middle'%3ERMK%3C/text%3E%3C/svg%3E">
+
+  <!-- Preload critical font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- JSON-LD: LocalBusiness (completo) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://rmkpty.com",
+    "name": "RMK SOLUTIONS PTY",
+    "alternateName": "RMK PTY",
+    "description": "Gaming de Alto Nivel & Centro de Soluciones Informáticas",
+    "url": "https://rmkpty.com",
+    "telephone": "+50765967716",
+    "email": "info@rmkpty.com",
+    "priceRange": "$",
+    "currenciesAccepted": "USD",
+    "paymentAccepted": "Efectivo, Yappy, Transferencia Bancaria",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Calle Santa Rita, frente a Plaza Monitito",
+      "addressLocality": "La Chorrera",
+      "addressRegion": "Panamá Oeste",
+      "addressCountry": "PA"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 8.5386,
+      "longitude": -79.8736
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "09:00",
+        "closes": "21:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Sunday",
+        "opens": "11:00",
+        "closes": "18:00"
+      }
+    ],
+    "image": "/assets/hero-bg.jpg",
+    "sameAs": ["https://instagram.com/rmksolutionspty"],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Servicios RMK PTY",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Zona Gaming PC",
+            "description": "PCs optimizadas 144Hz+, periféricos mecánicos, Steam, Epic, Riot"
+          },
+          "price": "1.00",
+          "priceCurrency": "USD"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Zona PS5",
+            "description": "PlayStation 5 en pantallas 65\" 4K HDR"
+          },
+          "price": "1.50",
+          "priceCurrency": "USD"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Impresiones y Copias",
+            "description": "B/N y color láser, inyección de tinta, copias"
+          },
+          "price": "0.10",
+          "priceCurrency": "USD"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Soporte Técnico",
+            "description": "Chequeo, limpieza, armados a medida, upgrades"
+          },
+          "price": "10.00",
+          "priceCurrency": "USD"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Oficina y Diseño",
+            "description": "Trabajos académicos, investigaciones, diseño gráfico"
+          },
+          "price": "0.00",
+          "priceCurrency": "USD"
+        }
+      ]
+    }
+  }
+  </script>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Critical CSS (inlined for speed) -->
+  <style>
+    /* === PRELOADER === */
+    .preloader {
+      position: fixed; inset: 0; z-index: 9999;
+      background: #050507;
+      display: flex; align-items: center; justify-content: center;
+      transition: opacity 0.5s ease, visibility 0.5s ease;
+    }
+    .preloader.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+    .preloader-spinner {
+      width: 48px; height: 48px;
+      border: 3px solid rgba(139,92,246,0.3);
+      border-top-color: #8b5cf6;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* === SCROLL PROGRESS BAR === */
+    .scroll-progress {
+      position: fixed; top: 0; left: 0; height: 3px; z-index: 100;
+      background: linear-gradient(90deg, #06b6d4, #8b5cf6, #ec4899);
+      transform-origin: left; transform: scaleX(0);
+      transition: transform 0.1s linear;
+    }
+
+    /* === SCROLLBAR === */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #050507; }
+    ::-webkit-scrollbar-thumb { background: #1f2937; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #374151; }
+
+    /* === NAVBAR GLASS === */
+    .glass {
+      background: rgba(10,10,18,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    /* === NEON GLOW === */
+    .neon-glow {
+      box-shadow: 0 0 20px rgba(6,182,212,0.25), inset 0 0 20px rgba(139,92,246,0.1);
+      border: 1px solid rgba(6,182,212,0.4);
+    }
+
+    /* === GRADIENT TEXT === */
+    .gradient-text {
+      background: linear-gradient(90deg, #06b6d4, #8b5cf6, #ec4899);
+      -webkit-background-clip: text; color: transparent;
+    }
+
+    /* === CLIP ANGLED === */
+    .clip-angled { clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); }
+
+    /* === SCROLL ANIMATIONS === */
+    .scroll-hidden { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+    .scroll-visible { opacity: 1; transform: translateY(0); }
+
+    /* === WA FLOAT PULSE === */
+    .wa-float { animation: pulse 2s infinite; }
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(37,211,102,0.4); }
+      50% { box-shadow: 0 0 0 12px rgba(37,211,102,0); }
+    }
+
+    /* === GLOW CARD HOVER === */
+    .glow-card {
+      transition: all 0.3s ease;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .glow-card:hover {
+      border-color: rgba(6,182,212,0.5);
+      box-shadow: 0 0 30px rgba(6,182,212,0.15);
+      transform: translateY(-4px);
+    }
+
+    /* === HERO IMAGE WITH OVERLAY === */
+    .hero-bg {
+      background: url('/assets/hero-bg.jpg') center/cover no-repeat;
+    }
+    .hero-bg-fallback {
+      background: linear-gradient(135deg, rgba(139,92,246,0.15), rgba(6,182,212,0.15)), #0a0a12;
+    }
+
+    /* === LAZY LOAD FADE === */
+    .lazy-img {
+      opacity: 0; transition: opacity 0.5s ease;
+    }
+    .lazy-img.loaded { opacity: 1; }
+
+    /* === FOCUS STYLES === */
+    *:focus-visible { outline: 2px solid #06b6d4; outline-offset: 2px; border-radius: 4px; }
+
+    /* === ANIMATIONS === */
+    .animate-fade-up { animation: fadeUp 0.8s ease-out forwards; }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* === COUNTER ANIMATION === */
+    .price-highlight {
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* === MOBILE MENU ANIMATION === */
+    .mobile-menu-enter {
+      animation: slideDown 0.3s ease-out;
+    }
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+
+  <!-- Analytics placeholder (uncomment when ready) -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID');
+  </script>
+  -->
+</head>
+
+<body class="bg-[#050507] text-gray-200 font-sans antialiased selection:bg-cyan-500/30 selection:text-white">
+
+  <!-- PRELOADER -->
+  <div class="preloader" id="preloader" role="status" aria-label="Cargando sitio">
+    <div class="text-center">
+      <div class="preloader-spinner mx-auto mb-4"></div>
+      <p class="text-gray-500 text-sm font-cyber tracking-wider">CARGANDO</p>
+    </div>
+  </div>
+
+  <!-- SCROLL PROGRESS BAR -->
+  <div class="scroll-progress" id="scrollProgress" role="progressbar" aria-label="Progreso de lectura"></div>
+
+  <!-- ============================================ -->
+  <!-- NAVBAR -->
+  <!-- ============================================ -->
+  <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 glass" role="navigation" aria-label="Navegación principal">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <!-- Logo -->
+        <a href="#inicio" class="font-cyber text-2xl font-bold tracking-wider text-white group" aria-label="RMK PTY - Inicio">
+          RMK<span class="text-cyan-400 group-hover:text-white transition-colors duration-200">PTY</span>
+        </a>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+          <a href="#inicio" class="hover:text-cyan-400 transition-colors duration-200">Inicio</a>
+          <a href="#gaming" class="hover:text-cyan-400 transition-colors duration-200">Zona Gaming</a>
+          <a href="#servicios" class="hover:text-purple-400 transition-colors duration-200">Soluciones IT</a>
+          <a href="#contacto" class="hover:text-cyan-400 transition-colors duration-200">Ubicación</a>
+          <button onclick="openModal('General')" class="bg-gradient-to-r from-purple-600 to-cyan-500 text-white px-5 py-2.5 rounded-full hover:scale-105 transition-all duration-200 shadow-lg shadow-purple-500/20 font-bold" aria-label="Reservar puesto o cotizar servicio">
+            💬 Reservar / Cotizar
+          </button>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="menu-btn" class="md:hidden text-white focus:outline-none p-2 hover:text-cyan-400 transition-colors" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Dropdown -->
+      <div id="mobile-menu" class="hidden md:hidden bg-[#0a0a12] border-t border-white/10 px-4 pb-6 pt-4 space-y-4 text-center mobile-menu-enter" role="menu">
+        <a href="#inicio" class="block py-2 hover:text-cyan-400 font-medium transition-colors" role="menuitem">Inicio</a>
+        <a href="#gaming" class="block py-2 hover:text-cyan-400 font-medium transition-colors" role="menuitem">Zona Gaming</a>
+        <a href="#servicios" class="block py-2 hover:text-purple-400 font-medium transition-colors" role="menuitem">Soluciones IT</a>
+        <a href="#contacto" class="block py-2 hover:text-cyan-400 font-medium transition-colors" role="menuitem">Ubicación</a>
+        <button onclick="openModal('Mobile')" class="w-full mt-2 bg-gradient-to-r from-purple-600 to-cyan-500 text-white px-4 py-3 rounded-lg font-bold shadow-lg hover:scale-[1.02] transition-all" role="menuitem">💬 Reservar Ahora</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============================================ -->
+  <!-- HERO SECTION -->
+  <!-- ============================================ -->
+  <header id="inicio" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+    <!-- Background -->
+    <div class="hero-bg hero-bg-fallback absolute inset-0"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-[#050507]/80 via-[#050507]/60 to-[#050507]"></div>
+
+    <!-- Animated gradient orbs -->
+    <div class="absolute top-1/4 left-1/4 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
+    <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse" style="animation-delay: 1.5s;"></div>
+
+    <div class="relative z-10 text-center px-4 max-w-5xl mx-auto mt-10">
+      <span class="inline-block py-1.5 px-4 rounded-full bg-purple-500/20 border border-purple-500/50 text-purple-400 text-xs md:text-sm font-bold mb-6 tracking-widest uppercase animate-fade-up">
+        📍 La Chorrera • Panamá Oeste
+      </span>
+
+      <h1 class="font-cyber text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight text-white mb-6 animate-fade-up" style="animation-delay: 0.2s;">
+        Donde el <span class="gradient-text">Gaming de Alto Nivel</span><br>
+        se encuentra con la <span class="text-cyan-400">Solución Tecnológica</span>
+      </h1>
+
+      <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed animate-fade-up" style="animation-delay: 0.4s;">
+        PCs optimizadas, consolas de última generación, impresiones láser, soporte técnico y cafetería.<br>
+        <span class="text-white font-semibold">Todo en un solo lugar.</span>
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-5 justify-center animate-fade-up" style="animation-delay: 0.6s;">
+        <a href="#gaming" class="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg font-bold text-white hover:scale-105 transition-all duration-200 shadow-lg shadow-purple-500/40">
+          🎮 Ver Zona Gaming
+        </a>
+        <a href="#servicios" class="px-8 py-4 bg-white/10 backdrop-blur border border-white/20 rounded-lg font-bold hover:bg-white/20 transition-all duration-200">
+          🖨️ Servicios de Oficina
+        </a>
+      </div>
+
+      <!-- Trust badges -->
+      <div class="flex flex-wrap justify-center gap-6 mt-12 text-gray-500 text-sm animate-fade-up" style="animation-delay: 0.8s;">
+        <span class="flex items-center gap-1">✅ PCs con 144Hz</span>
+        <span class="flex items-center gap-1">✅ PS5 disponible</span>
+        <span class="flex items-center gap-1">✅ WiFi 300Mbps</span>
+        <span class="flex items-center gap-1">✅ A/C</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================================ -->
+  <!-- GAMING ZONE -->
+  <!-- ============================================ -->
+  <section id="gaming" class="py-24 bg-[#0a0a12] relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2 pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center mb-16 scroll-hidden">
+        <p class="text-cyan-400 text-sm font-cyber tracking-widest uppercase mb-3">Zona de Combate</p>
+        <h2 class="font-cyber text-3xl md:text-5xl font-bold text-white mb-4">
+          Rendimiento <span class="text-cyan-400">Sin Límites</span>
+        </h2>
+        <p class="text-gray-400 max-w-2xl mx-auto">
+          Ambiente inmersivo RGB, periféricos mecánicos y conexión estable. Diseñado para competir, hacer stream o desconectar.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <!-- Card 1: PCs -->
+        <div class="bg-white/5 glow-card p-6 rounded-xl scroll-hidden group">
+          <div class="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">💻</div>
+          <h3 class="font-bold text-xl text-white mb-2">PCs Ultra Optimizadas</h3>
+          <ul class="text-gray-400 text-sm space-y-1.5">
+            <li>• 1080p / 2K Native</li>
+            <li>• 120Hz a 144Hz+</li>
+            <li>• Steam, Epic, Riot, Battle.net</li>
+            <li>• Teclados/Mouse Mecánicos</li>
+          </ul>
+        </div>
+
+        <!-- Card 2: PS5 -->
+        <div class="bg-white/5 glow-card p-6 rounded-xl scroll-hidden group">
+          <div class="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🎮</div>
+          <h3 class="font-bold text-xl text-white mb-2">Consolas Next-Gen</h3>
+          <ul class="text-gray-400 text-sm space-y-1.5">
+            <li>• PlayStation 5</li>
+            <li>• Pantallas 65" 4K HDR</li>
+            <li>• Controles Originales</li>
+            <li>• Catálogo Actualizado</li>
+          </ul>
+        </div>
+
+        <!-- Card 3: Proyector & Streams -->
+        <div class="bg-white/5 glow-card p-6 rounded-xl scroll-hidden group">
+          <div class="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">📽️</div>
+          <h3 class="font-bold text-xl text-white mb-2">Zona Proyector & Streams</h3>
+          <ul class="text-gray-400 text-sm space-y-1.5">
+            <li>• Eventos en Vivo</li>
+            <li>• Fighting Games & RPGs</li>
+            <li>• Audio Envolvente</li>
+            <li>• Espacio para Torneos</li>
+          </ul>
+        </div>
+
+        <!-- Card 4: Pricing -->
+        <div class="bg-gradient-to-br from-purple-500/20 to-cyan-500/10 glow-card p-6 rounded-xl flex flex-col justify-center items-center text-center scroll-hidden hover:scale-[1.02] transition-all duration-300">
+          <h3 class="font-bold text-xl text-white mb-2">Tarifas Accessibles</h3>
+          <div class="text-5xl font-cyber font-extrabold text-cyan-400 mb-1 price-highlight">$1.00</div>
+          <p class="text-gray-300 mb-4 text-sm">/ Hora Base</p>
+          <div class="bg-[#0a0a12]/80 px-4 py-3 rounded-lg w-full border border-cyan-500/30">
+            <span class="text-yellow-400 font-bold text-sm">🔥 PROMO PACK</span><br>
+            <span class="text-2xl font-bold text-white">4 Horas</span>
+            <span class="text-cyan-400 font-bold block mt-1 text-xl">$3.50</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- SERVICES / CORPORATE -->
+  <!-- ============================================ -->
+  <section id="servicios" class="py-24 bg-[#f8f9fa] text-gray-800 clip-angled relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 scroll-hidden">
+        <p class="text-blue-600 text-sm font-cyber tracking-widest uppercase mb-3">Centro de Soluciones</p>
+        <h2 class="font-cyber text-3xl md:text-5xl font-bold text-gray-900 mb-4">
+          & <span class="text-blue-600">Productividad</span>
+        </h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          Espacio limpio, profesional y rápido. Desde una copia simple hasta el armado de tu equipo ideal.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <!-- Printing -->
+        <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-blue-600 scroll-hidden hover:shadow-xl transition-shadow">
+          <h3 class="text-2xl font-bold mb-6 flex items-center gap-2 text-gray-900">🖨️ Copias & Impresiones</h3>
+          <div class="space-y-3 text-sm">
+            <div class="flex justify-between border-b border-gray-100 pb-2">
+              <span class="text-gray-600">Hoja Corta</span>
+              <span class="font-bold text-blue-600 price-highlight">$0.10</span>
+            </div>
+            <div class="flex justify-between border-b border-gray-100 pb-2">
+              <span class="text-gray-600">Hoja Larga</span>
+              <span class="font-bold text-blue-600 price-highlight">$0.20</span>
+            </div>
+            <div class="flex justify-between border-b border-gray-100 pb-2">
+              <span class="text-gray-600">B/N Láser</span>
+              <span class="font-bold text-blue-600 price-highlight">$0.20</span>
+            </div>
+            <div class="flex justify-between border-b border-gray-100 pb-2">
+              <span class="text-gray-600">Color Inyección</span>
+              <span class="font-bold text-blue-600 price-highlight">desde $0.75</span>
+            </div>
+            <div class="flex justify-between border-b border-gray-100 pb-2">
+              <span class="text-gray-600">Color Láser</span>
+              <span class="font-bold text-blue-600 price-highlight">$1.00</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tech Support -->
+        <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-purple-600 scroll-hidden hover:shadow-xl transition-shadow">
+          <h3 class="text-2xl font-bold mb-6 flex items-center gap-2 text-gray-900">🔧 Soporte Técnico</h3>
+          <div class="space-y-3 text-sm">
+            <div class="flex justify-between border-b border-gray-100 pb-2">
+              <span class="text-gray-600">Chequeo Torre</span>
+              <span class="font-bold text-purple-600 price-highlight">$10.00</span>
+            </div>
+            <div class="flex justify-between border-b border-gray-100 pb-2">
+              <span class="text-gray-600">Chequeo Laptop</span>
+              <span class="font-bold text-purple-600 price-highlight">$20.00</span>
+            </div>
+            <div class="flex justify-between border-b border-gray-100 pb-2">
+              <span class="text-gray-600">Armado a Medida</span>
+              <span class="font-bold text-purple-600">Cotización</span>
+            </div>
+            <div class="flex justify-between border-b border-gray-100 pb-2">
+              <span class="text-gray-600">Upgrade RAM</span>
+              <span class="font-bold text-purple-600">Cotización</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-gray-600">Upgrade SSD</span>
+              <span class="font-bold text-purple-600">Cotización</span>
+            </div>
+          </div>
+          <p class="mt-4 text-gray-500 italic text-xs">*Limpieza de virus, optimización de Windows, upgrades de RAM/SSD.</p>
+        </div>
+
+        <!-- Academic & Design -->
+        <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-green-600 scroll-hidden hover:shadow-xl transition-shadow">
+          <h3 class="text-2xl font-bold mb-6 flex items-center gap-2 text-gray-900">📚 Oficina & Diseño</h3>
+          <ul class="space-y-4 text-gray-700 text-sm">
+            <li class="flex items-start gap-2"><span class="text-green-600 mt-0.5 flex-shrink-0">✓</span> Investigaciones, trabajos escolares y universitarios</li>
+            <li class="flex items-start gap-2"><span class="text-green-600 mt-0.5 flex-shrink-0">✓</span> Proyectos profesionales y presentaciones ejecutivas</li>
+            <li class="flex items-start gap-2"><span class="text-green-600 mt-0.5 flex-shrink-0">✓</span> Diseño gráfico, logos, flyers y material POP</li>
+            <li class="flex items-start gap-2"><span class="text-green-600 mt-0.5 flex-shrink-0">☕</span> Cafetería disponible mientras trabajas</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Info Box -->
+      <div class="bg-[#0a0a12] text-white rounded-2xl p-8 shadow-xl scroll-hidden">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+          <div>
+            <h4 class="font-bold text-cyan-400 mb-2">🕒 Horario</h4>
+            <p class="text-gray-300">Lunes a Sábado: <span class="text-white font-semibold">9:00 AM - 9:00 PM</span></p>
+            <p class="text-gray-300">Domingos: <span class="text-white font-semibold">11:00 AM - 6:00 PM</span></p>
+          </div>
+          <div>
+            <h4 class="font-bold text-cyan-400 mb-2">🛡️ Garantía</h4>
+            <p class="text-gray-300">Todos nuestros servicios incluyen revisión post-trabajo. Equipos tratados con protocolos antiestáticos.</p>
+          </div>
+          <div>
+            <h4 class="font-bold text-cyan-400 mb-2">💳 Pagos</h4>
+            <p class="text-gray-300">Efectivo, Yappy, Transferencia Bancaria</p>
+            <p class="text-gray-500 text-sm mt-1">Tarjetas próximamente</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- CONTACT & MAP -->
+  <!-- ============================================ -->
+  <section id="contacto" class="py-24 bg-[#050507] text-white relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="scroll-hidden">
+          <p class="text-cyan-400 text-sm font-cyber tracking-widest uppercase mb-3">Encuéntranos</p>
+          <h2 class="font-cyber text-3xl md:text-5xl font-bold mb-6">
+            & <span class="text-cyan-400">Conéctate</span>
+          </h2>
+          <p class="text-gray-300 text-lg mb-8">
+            Ubicación estratégica con fácil acceso y parqueo cercano. Ambiente seguro y monitoreado 24/7.
+          </p>
+
+          <div class="space-y-6">
+            <div class="flex items-start gap-4 bg-white/5 p-5 rounded-xl border border-white/10 hover:border-purple-500/30 transition-all duration-200">
+              <div class="bg-purple-500/20 p-3 rounded-lg text-xl flex-shrink-0">📍</div>
+              <div>
+                <h4 class="font-bold text-white text-lg">Dirección Exacta</h4>
+                <p class="text-gray-400">Calle Santa Rita, al frente de Plaza Monitito</p>
+                <p class="text-gray-400">La Chorrera, Panamá Oeste</p>
+                <a href="https://www.google.com/maps/search/Calle+Santa+Rita+Plaza+Monitito+La+Chorrera+Panama" target="_blank" rel="noopener noreferrer" class="text-cyan-400 text-sm hover:underline mt-2 inline-block font-semibold">
+                  📍 Ver en Google Maps →
+                </a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4 bg-white/5 p-5 rounded-xl border border-white/10 hover:border-purple-500/30 transition-all duration-200">
+              <div class="bg-purple-500/20 p-3 rounded-lg text-xl flex-shrink-0">📱</div>
+              <div>
+                <h4 class="font-bold text-white text-lg">Contacto Directo</h4>
+                <a href="https://wa.me/50765967716?text=Hola%20RMK%20PTY%2C%20vengo%20de%20la%20web%20y%20quiero%20informaci%C3%B3n" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-green-400 text-lg font-bold transition-colors">
+                  WhatsApp: 6596-7716
+                </a><br>
+                <a href="https://instagram.com/rmksolutionspty" target="_blank" rel="noopener noreferrer" class="text-pink-400 hover:text-pink-300 transition-colors">
+                  Instagram: @RMK SOLUTIONS PTY
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Action Buttons -->
+          <div class="flex flex-wrap gap-3 mt-8">
+            <button onclick="openModal('Zona Gaming')" class="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-cyan-500 hover:scale-105 text-white font-bold py-3 px-6 rounded-lg transition-all duration-200 shadow-lg shadow-purple-500/30">
+              🎮 Reservar Gaming
+            </button>
+            <button onclick="openModal('Impresiones')" class="inline-flex items-center gap-2 bg-white/10 border border-white/20 hover:bg-white/20 text-white font-bold py-3 px-6 rounded-lg transition-all duration-200">
+              🖨️ Cotizar Impresiones
+            </button>
+            <button onclick="openModal('Soporte')" class="inline-flex items-center gap-2 bg-white/10 border border-white/20 hover:bg-white/20 text-white font-bold py-3 px-6 rounded-lg transition-all duration-200">
+              🔧 Pedir Soporte
+            </button>
+          </div>
+        </div>
+
+        <!-- Map -->
+        <div class="bg-gray-800 rounded-2xl overflow-hidden shadow-2xl border border-gray-700 h-80 lg:h-[450px] scroll-hidden relative">
+          <iframe
+            class="absolute inset-0 w-full h-full"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3922.888!2d-79.874!3d8.538!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8efae5f41c4b5f0b%3A0x8e3c5b7e5c0f8e0!2sLa+Chorrera%2C+Panam%C3%A1!5e0!3m2!1ses!2span!4v1700000000000"
+            style="border:0; filter: invert(90%) hue-rotate(180deg) brightness(90%);"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Ubicación RMK PTY en La Chorrera">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- FOOTER -->
+  <!-- ============================================ -->
+  <footer class="bg-black py-10 border-t border-white/10 text-center text-gray-500 text-sm">
+    <div class="max-w-7xl mx-auto px-4">
+      <p class="font-cyber text-white text-lg mb-2">RMK PTY / RMK SOLUTIONS PTY</p>
+      <p class="mb-6 text-gray-400">Gaming de Alto Nivel & Centro de Soluciones Informáticas</p>
+
+      <div class="flex justify-center gap-6 mb-8">
+        <a href="https://wa.me/50765967716?text=Hola%20RMK%20PTY%2C%20vengo%20de%20la%20web" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-green-400 transition-colors text-lg" aria-label="WhatsApp">
+          💬 WhatsApp
+        </a>
+        <a href="https://instagram.com/rmksolutionspty" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-pink-400 transition-colors text-lg" aria-label="Instagram">
+          📷 Instagram
+        </a>
+      </div>
+
+      <p class="text-gray-600">&copy; 2026 Todos los derechos reservados. La Chorrera, Panamá.</p>
+    </div>
+  </footer>
+
+  <!-- ============================================ -->
+  <!-- FLOATING WA BUTTON -->
+  <!-- ============================================ -->
+  <a href="https://wa.me/50765967716?text=Hola%20RMK%20PTY%2C%20vengo%20de%20la%20web%20y%20quiero%20informaci%C3%B3n" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-400 hover:scale-110 transition-all duration-200 flex items-center justify-center wa-float" aria-label="Contactar por WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669-.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+    </svg>
+  </a>
+
+  <!-- ============================================ -->
+  <!-- MODAL DE RESERVA -->
+  <!-- ============================================ -->
+  <div id="reservaModal" class="fixed inset-0 z-[60] hidden flex items-center justify-center px-4" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" onclick="closeModal()"></div>
+    <div class="bg-[#0a0a12] border border-white/10 rounded-2xl p-8 max-w-md w-full relative z-10 shadow-2xl transform transition-all duration-300 scale-95 opacity-0" id="modalContent">
+      <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors" aria-label="Cerrar modal">✕</button>
+      <h3 id="modal-title" class="font-cyber text-2xl font-bold text-white mb-2">¡Casi listo! 🎮🖥️</h3>
+      <p class="text-gray-400 mb-6" id="modal-description">Te redirigiremos a WhatsApp para confirmar tu reserva o cotización.</p>
+      <a id="waLink" href="#" target="_blank" rel="noopener noreferrer" class="block w-full bg-green-500 hover:bg-green-400 text-white font-bold py-3 px-6 rounded-lg text-center transition-all duration-200 shadow-lg">
+        Abrir WhatsApp →
+      </a>
+      <p class="text-center text-xs text-gray-500 mt-4">Respuesta promedio: &lt; 15 min</p>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- JAVASCRIPT LOGIC -->
+  <!-- ============================================ -->
+  <script>
+    // === PRELOADER ===
+    window.addEventListener('load', () => {
+      const preloader = document.getElementById('preloader');
+      setTimeout(() => preloader.classList.add('hidden'), 300);
+    });
+
+    // === SCROLL PROGRESS BAR ===
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercent = docHeight > 0 ? scrollTop / docHeight : 0;
+      const progressBar = document.getElementById('scrollProgress');
+      progressBar.style.transform = `scaleX(${scrollPercent})`;
+    });
+
+    // === NAVBAR SCROLL EFFECT ===
+    let lastScroll = 0;
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.scrollY;
+      if (currentScroll > 100) {
+        navbar.style.borderBottomColor = 'rgba(255,255,255,0.15)';
+      } else {
+        navbar.style.borderBottomColor = 'rgba(255,255,255,0.08)';
+      }
+      lastScroll = currentScroll;
+    });
+
+    // === MOBILE MENU LOGIC ===
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      const expanded = !mobileMenu.classList.contains('hidden');
+      menuBtn.setAttribute('aria-expanded', expanded);
+    });
+    const closeMenu = () => {
+      mobileMenu.classList.add('hidden');
+      menuBtn.setAttribute('aria-expanded', 'false');
+    };
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+
+    // === SCROLL ANIMATION OBSERVER ===
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('scroll-visible');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    document.querySelectorAll('.scroll-hidden').forEach(el => observer.observe(el));
+
+    // === MODAL LOGIC ===
+    const modal = document.getElementById('reservaModal');
+    const modalContent = document.getElementById('modalContent');
+    const waLink = document.getElementById('waLink');
+    const modalDesc = document.getElementById('modal-description');
+
+    const waMessages = {
+      'General': 'Hola RMK PTY, vengo de la web y quiero información.',
+      'Mobile': 'Hola RMK PTY, vengo de la web (sección: móvil) y quiero reservar un puesto o cotizar un servicio.',
+      'Zona Gaming': 'Hola RMK PTY, vengo de la web y quiero reservar un puesto de Zona Gaming. ¿Tienen disponibilidad?',
+      'Impresiones': 'Hola RMK PTY, vengo de la web y quiero cotizar impresiones/copias. ¿Cuánto cuesta por hoja corta en color?',
+      'Soporte': 'Hola RMK PTY, vengo de la web y quiero pedir soporte técnico. ¿A qué hora pueden revisar mi equipo?'
+    };
+
+    const openModal = (source) => {
+      const message = waMessages[source] || waMessages['General'];
+      const encoded = encodeURIComponent(message);
+      waLink.href = `https://wa.me/50765967716?text=${encoded}`;
+      modalDesc.textContent = `Mensaje: "${message}"`;
+      modal.classList.remove('hidden');
+      setTimeout(() => {
+        modalContent.classList.remove('scale-95', 'opacity-0');
+        modalContent.classList.add('scale-100', 'opacity-100');
+      }, 10);
+    };
+
+    const closeModal = () => {
+      modalContent.classList.remove('scale-100', 'opacity-100');
+      modalContent.classList.add('scale-95', 'opacity-0');
+      setTimeout(() => modal.classList.add('hidden'), 200);
+    };
+
+    // Close modal on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModal();
+    });
+  </script>
+</body>
+</html>
